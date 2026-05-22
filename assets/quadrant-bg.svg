@@ -1,0 +1,16 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="grain" patternUnits="userSpaceOnUse" width="120" height="120">
+      <rect width="120" height="120" fill="transparent"></rect>
+      <circle cx="20" cy="40" r="1" fill="#000" opacity="0.08"></circle>
+      <circle cx="80" cy="20" r="1" fill="#000" opacity="0.08"></circle>
+      <circle cx="100" cy="90" r="1" fill="#000" opacity="0.08"></circle>
+      <circle cx="40" cy="100" r="1" fill="#000" opacity="0.08"></circle>
+    </pattern>
+  </defs>
+  <polygon points="0,0 720,0 480,800 0,800" fill="#C41E3A"></polygon>
+  <polygon points="720,0 1200,0 1200,400 600,400" fill="#E86A17"></polygon>
+  <polygon points="600,400 1200,400 1200,800 360,800" fill="#F5B731"></polygon>
+  <polygon points="480,800 360,800 600,400 720,0" fill="#6B1D3A" opacity="0.4"></polygon>
+  <rect width="1200" height="800" fill="url(#grain)"></rect>
+</svg>
