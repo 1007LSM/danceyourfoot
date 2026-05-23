@@ -144,14 +144,16 @@ function Countdown({ target }) {
 // ============ Nav ============
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  const close = () => setMenuOpen(false);
   return (
     <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
-      <a href="#top" className="nav-logo">
+      <a href="#top" className="nav-logo" onClick={close}>
         <Logo size={40}/>
         <span>Dance <span className="accent">Your</span> Foot</span>
       </a>
@@ -166,6 +168,26 @@ function Nav() {
           Inscription <span className="arrow">→</span>
         </a>
       </div>
+      <button
+        className={`nav-hamburger${menuOpen ? " open" : ""}`}
+        aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+        onClick={() => setMenuOpen((o) => !o)}
+      >
+        <span></span><span></span><span></span>
+      </button>
+      {menuOpen && (
+        <div className="nav-mobile-menu">
+          <a href="#concept" onClick={close}>Concept</a>
+          <a href="#format" onClick={close}>Format</a>
+          <a href="#vote" onClick={close}>Vote</a>
+          <a href="#teams" onClick={close}>Équipes</a>
+          <a href="#dj" onClick={close}>DJ</a>
+          <a href="#infos" onClick={close}>Infos</a>
+          <a href="#inscription" className="btn btn-primary nav-mobile-cta" onClick={close}>
+            Inscription <span className="arrow">→</span>
+          </a>
+        </div>
+      )}
     </nav>
   );
 }
