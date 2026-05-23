@@ -2122,6 +2122,13 @@ h2.section-title {
   .hero-cta .btn { width: 100%; justify-content: center; }
 }
 
+/* Timeline bar match (3 segments) — segment étroit sur mobile */
+@media (max-width: 640px) {
+  .timeline-bar { height: 48px; }
+  .timeline-seg { font-size: 10px; padding: 0 6px; letter-spacing: 0; line-height: 1.2; overflow: hidden; }
+  .timeline-seg.s-tirs { font-size: 0; }
+}
+
 /* Timeline show-bar — trop chargé sur petits écrans */
 @media (max-width: 640px) {
   .show-seg { font-size: 9px; letter-spacing: 0; padding: 0 3px; line-height: 1.1; }
