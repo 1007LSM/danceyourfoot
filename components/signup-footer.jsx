@@ -13,6 +13,18 @@ function Signup() {
   }
   function submit(e) {
     e.preventDefault();
+    const kindLabel = { team: "École de danse", dj: "DJ / artiste", sponsor: "Sponsor / partenaire", info: "Pour en savoir plus" }[form.kind] || form.kind;
+    const lines = [
+      `Type : ${kindLabel}`,
+      form.school      ? `École : ${form.school}`           : null,
+      form.discipline  ? `Discipline : ${form.discipline}`  : null,
+      `Nom : ${form.captain}`,
+      `Contact : ${form.contact}`,
+      form.message     ? `\nMessage :\n${form.message}`      : null,
+    ].filter(Boolean).join("\n");
+    const subject = encodeURIComponent(`[Dance Your Foot] Inscription — ${kindLabel}`);
+    const body    = encodeURIComponent(`Bonjour Sylvain,\n\nNouvelle inscription via le site :\n\n${lines}\n\n---\nEnvoyé depuis danceyourfoot.com`);
+    window.location.href = `mailto:Sylvain@danceyourfoot.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
 
