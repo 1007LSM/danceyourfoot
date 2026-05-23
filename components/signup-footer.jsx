@@ -38,8 +38,8 @@ function Signup() {
               <div style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontWeight: 900, fontSize: 28, color: "var(--bordeaux)", textTransform: "uppercase", lineHeight: 1 }}>
                 Sylvain Nicolier
               </div>
-              <a href="mailto:sylvain@danseyourfoot.com" style={{ display: "block", marginTop: 8, fontFamily: "var(--font-mono)", fontSize: 14, color: "var(--dark)" }}>
-                sylvain@danseyourfoot.com
+              <a href="mailto:Sylvain@danceyourfoot.com" style={{ display: "block", marginTop: 8, fontFamily: "var(--font-mono)", fontSize: 14, color: "var(--dark)" }}>
+                Sylvain@danceyourfoot.com
               </a>
               <a href="tel:+41788490089" style={{ display: "block", marginTop: 4, fontFamily: "var(--font-mono)", fontSize: 14, color: "var(--dark)" }}>
                 +41 78 849 00 89
@@ -149,7 +149,7 @@ function Footer() {
           <h4>Contact</h4>
           <ul>
             <li>Sylvain Nicolier</li>
-            <li><a href="mailto:sylvain@danseyourfoot.com">sylvain@danseyourfoot.com</a></li>
+            <li><a href="mailto:Sylvain@danceyourfoot.com">Sylvain@danceyourfoot.com</a></li>
             <li><a href="tel:+41788490089">+41 78 849 00 89</a></li>
             <li>Suisse romande</li>
           </ul>
